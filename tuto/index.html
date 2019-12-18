@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Documentation Technique</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+<body>
+	<!--Navbar-->
+	<nav id="navbar">
+		<header>Tutoriel CSS</header>
+		<h5>Quelques Tuto à connaître!</h5>
+		<ul>
+			<li>
+				<a class="nav-link" href="#Définition_de_CSS">Définition de CSS</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Ce_qu'il_faut_savoir">Ce qu'il faut savoir</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Comment_çà_fonctionne">Comment çà fonctionne</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Le_CSS_dans_le_code_HTML">Le CSS dans le code HTML</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Séparer_le_CSS_du_code_HTML">Séparer le CSS du code HTML</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Appliquer_un_style_aux_balises">Appliquer un style aux balises</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Les_CLASS">Les CLASS</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Les_ID">Les ID</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Priorité_des_styles">Priorité des styles</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Emboîtement_de_balises">Emboîtement de balises</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Images_et_Background">Images et Background</a>
+			</li>
+			<li>
+				<a class="nav-link" href="#Couleurs">Couleurs</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!--Main-doc-->
+	<main id="main-doc">
+		<div class="logo"><img src="img/outil.jpg"></div>
+		<!--Sujet1-->
+		<section class="main-section" id="Définition_de_CSS">
+			<header>Définition de CSS</header>
+			<article>
+				<p>CSS est l’acronyme de « Cascading Style Sheets » ce qui signifie « feuille de style en cascade ».</p>
+
+				<p>Le CSS correspond à un langage informatique permettant de mettre en forme des pages web (HTML ou XML).</p>
+
+				<p>Ce langage est donc composé des fameuses « feuilles de style en cascade » également appelées fichiers CSS (.css) et contient des éléments de codage.</p>
+
+				<p>Il existe des outils pour faciliter la mise forme des page web par exemple:</p>
+				<ul>
+					<li>Bootstrap</li>
+					<li>Materialize</li>
+				</ul>
+			</article>		
+		</section>
+
+		<!--Sujet2-->
+		<section class="main-section" id="Ce_qu'il_faut_savoir">
+			<header>Ce qu'il faut savoir</header>
+			<article>
+				<p>Au début de l'histoire du Web, lorsque vous souhaitiez modifier le type de caractère d'une portion de texte, vous deviez utiliser la balise < font > en écrivant par exemple < font face="Times" >.</p>
+
+				<p>Si vous souhaitiez définir la couleur de l'arrière plan et la bordure d'un tableau ainsi que le retrait (padding) de chacune de ses colonnes, vous auriez défini votre tableau par le code suivant :</p>
+
+				<code>
+					< table border="1" bgcolor="silver" cellpadding="3" cellspacing="0">
+				</code>
+
+			</article>
+		</section>
+		<!--Sujet3-->
+		<section class="main-section" id="Comment_çà_fonctionne">
+			<header>Comment çà fonctionne</header>
+			<article>
+				<p>Les CSS représentent une nouvelle façon très efficace d'appliquer des styles aux éléments (X)HTML.</p>
+
+				<p>Elles vous permettent de définir n'importe quelle propriété de style comme la bordure, le type de caractère, la couleur de fond, l'espace entre les lettres, etc. (nous reviendrons plus tard sur la manière d'y parvenir).</p>
+
+				<p>Il y a trois façons principales d'appliquer des styles CSS :</p>
+
+				<ul>
+					<li>Dans le corps du code HTML ;</li>
+					<li>Dans l'en-tête de la page ;</li>
+					<li>Dans une feuille de style totalement séparée du code HTML.</li>
+				</ul>
+			</article>	
+		</section>
+		<!--Sujet4-->
+		<section class="main-section" id="Le_CSS_dans_le_code_HTML">
+			<header>Le CSS dans le code HTML</header>
+			<article>
+				<p>Vous pouvez définir des styles CSS directement dans la définition d'une balise HTML. Dans l'exemple ci-dessous, nous utilisons une balise < div > qui permet de définir une "boîte" à l'intérieur d'un contenu :</p>
+
+				<code>
+					< div style="background-color:orange; border:1px solid black; color:yellow; font-size:150%; padding:1em;">
+					Cette balise div a du style !
+					< /div>
+				</code>
+
+				<p>Cette approche est extrêmement proche de l'ancienne façon de définir des styles et présente les mêmes inconvénients.</p>
+
+				<p>Elle ne présente un intérêt que lorsque vous êtes certain que le style défini ne sera utilisé à aucun autre endroit ni sur aucune autre de vos pages. S'il y a la moindre chance pour que vous ayez à nouveau besoin de ce style à un autre endroit, vous devriez absolument utiliser l'une des deux autres méthodes proposées plus bas, afin de faciliter la maintenance et l'évolution de votre site.</p>
+			</article>			
+		</section>
+		<!--Sujet5-->
+		<section class="main-section" id="Séparer_le_CSS_du_code_HTML">
+			<header>Séparer le CSS du code HTML</header>
+			<article>
+				<p>La façon idéale de définir les CSS consiste à les enregistrer dans un document indépendant de vos pages HTML. Grâce à cette méthode, toutes les pages qui font référence à cette feuille de style externe hériteront de toutes ses définitions.</p>
+
+				<p>Un autre intérêt de cette méthode est de pouvoir définir plusieurs feuilles de styles pour le même contenu et de basculer d'une feuille à l'autre en fonction du support sur lequel le contenu est affiché (écran, imprimante, etc.). Nous reviendrons plus tard sur cet aspect.</p>
+
+				<p>Une page HTML peut faire référence à plusieurs feuilles de styles en même temps. Dans ce cas, les définitions contenues dans ces différentes feuilles seront combinées entre elles.</p>
+
+				<p>Voici un exemple de styles définis dans un document séparé :</p>
+
+				<code>
+					< head>
+					< link href="mes-styles.css" media="all" rel="stylesheet" type="text/css" />
+					< /head>
+				</code>
+
+				<p>Il y a de multiples avantages à séparer les feuilles de styles du contenu:</p>
+
+				<ul>
+					<li>La réduction de la taille des pages</li>
+					<li>La réduction des temps de connexion</li>
+					<li>Une mise à jour plus facile</li>
+					<li>Scinder le travail de rédaction et le travail de présentation</li>
+				</ul>
+			</article>
+		</section>
+		<!--Sujet6-->
+		<section class="main-section" id="Appliquer_un_style_aux_balises">
+			<header>Appliquer un style aux balises</header>
+			<article>
+				<p>Avec les CSS, vous pouvez changer la présentation de toutes les balises HTML standards. Il vous suffit de spécifier le nom de la balise et de faire figurer vos définitions comme suit :</p>
+
+				<code>
+					p 
+					{
+						font-weight:bold;
+						line-height:1.3em;
+					}
+				</code>
+
+				<p>La syntaxe générale de définition est la suivante :</p>
+
+				<ol>
+					<li>Préciser le nom de la balise en premier ;</li>
+					<li>Encadrer les définitions par des accolades { } ;</li>
+					<li>Placer un point virgule ; derrière chaque définition.</li>
+				</ol>
+			</article>	
+		</section>
+		<!--Sujet7-->
+		<section class="main-section" id="Les_CLASS">
+			<header>Les CLASS</header>
+			<article>
+				<p>Vous pouvez attribuer à chaque élément HTML une ou plusieurs classes. C'est vous qui définirez le nom de ces classes et qui déciderez de leurs styles.</p>
+
+				<p>Les styles définis dans les classes remplaceront les styles "normaux" des éléments auxquels ils s'appliquent.
+				Pour créer une classe, vous devez simplement faire figurer son nom précédé d'un point. Pour éviter toute ambiguïté, votre nom de classe ne doit pas comporter d'espace.</p>
+
+				<p>HTML :</p>
+				<code>					
+					< p class="mon-style">Le style s'applique à ce paragraphe</ p>
+				</code>
+
+				<p>CSS :</p>
+				<code>
+					.mon-style 
+					{
+						color: red;
+					}
+				</code>
+			</article>		
+		</section>
+		<!--Sujet8-->
+		<section class="main-section" id="Les_ID">
+			<header>Les ID</header>
+			<article>
+				<p>Les éléments HTML peuvent se voir attribuer un id (identification) en plus ou à la place d'une classe.</p>
+
+				<p>Le principe de l'id est très similaire à celui de la classe à une exception près :</p>
+
+				<ul>
+					<li>Plusieurs éléments peuvent avoir la même classe ;</li>
+					<li>Il ne doit y avoir qu'un seul élément ayant un id donné.</li>
+				</ul>
+
+				<p>Leur utilisation permet simplement de clarifier les choses et de mieux structurer vos pages :</p>
+
+				<ul>
+					<li>On utilise les classes pour définir l'aspect des mots, phrases et paragraphes ;</li>
+					<li>On utilise les id pour placer des blocs dans la page (sachant qu'on n'a généralement jamais deux blocs placés exactement au même endroit)</li>
+				</ul>
+
+				<p>Pour créer un id, vous devez simplement faire précéder son nom d'un dièse #. Pour éviter toute ambiguïté, votre nom d'id ne doit pas comporter d'espace.</p>
+
+				<p>HTML :</p>
+				<code>
+					< p id="mon-style">Le style s'applique à ce paragraphe</ p >
+				</code>
+
+				<p>CSS :</p>
+				<code>
+					#mon-style 
+					{
+						color: red;
+					}
+				</code>
+			</article>		
+		</section>
+		<!--Sujet9-->
+		<section class="main-section" id="Priorité_des_styles">
+			<header>Priorité des styles</header>
+			<article>
+				<p>Lorsque vous définissez vous-même le style d'une balise standard avec une définition telle que p {blablabla}, vous obligez tous les navigateurs à afficher votre texte de la même façon.
+				Si vous attribuez une classe à un paragraphe, les styles que vous aurez définis dans cette classe remplaceront également les styles standards du paragraphe et seront même prioritaires par rapport aux styles que vous aurez définis sous la forme p {blablabla}.</p>
+
+				<p>Si vous attribuez un id à un paragraphe, les styles définis dans l'id seront prioritaires par rapport à tous les autres styles pouvant s'appliquer à ce paragraphe.</p>
+
+				<p>Si vous définissez deux fois le même style dans 2 classes différentes et que les 2 classes s'appliquent à la même balise, c'est la dernière classe citée dans la déclaration class="classe1 classe2" qui sera prioritaire.</p>
+
+				<p>Si vous définissez 2 fois le même style pour la même balise standard, la même classe ou le même id, c'est la dernière définition qui sera prioritaire.</p>
+			</article>			
+		</section>
+		<!--Sujet10-->
+		<section class="main-section" id="Emboîtement_de_balises">
+			<header>Emboîtement de balises</header>
+			<article>
+				<p>Dans un cas d'emboîtement de balises tel que celui-ci :</p>
+
+				<code>
+					< body>
+					< div>
+					< p>
+					bla bla bla
+					</ p>
+					</ div>
+					</ body>
+				</code>
+
+				<p>Les différents styles attribués aux balises < body>, < div> et < p> vont se combiner pour définir quels sont les styles définitifs qui seront appliqués au texte "bla bla bla".
+				Si le même style est défini, puis redéfini dans ces différentes balises (la couleur du texte, par exemple), c'est la dernière définition qui l'emportera sur les autres.</p>
+
+				<p>Si un style particulier n'est défini que dans < body> il doit logiquement s'appliquer à l'ensemble du contenu de < body>.
+					En vérité, certains styles (tels que la couleur, par exemple) se transmettent automatiquement aux balises emboîtées, tandis que d'autres (tels que les marges, par exemple) ne se transmettent pas. Lorsqu'ils se transmettent, on dira que le contenu des balises < div> et < p> aura "hérité" des propriétés de < body>.</p>
+
+				</article>			
+			</section>
+			<!--Sujet11-->
+			<section class="main-section" id="Images_et_Background">
+				<header>Images et Background</header>
+				<article>
+					<p>Quand utiliser les CSS pour les images ?</p>
+
+					<p>Beaucoup d'images sont utilisées dans le but unique d'embellir les pages HTML. Ces images n'apportent rien au contenu, et en toute logique ne devrait pas être présentes dans la partie HTML de la page. De plus, si l'on souhaite changer l'apparence de la page, il est plus pratique de n'avoir que le fichier CSS à changer, plutôt que de devoir parcourir le ou les fichiers HTML à la recherche des images de présentation.</p>
+
+					<p>Mais attention : les images insérées par CSS sont complètement absentes du contenu, et donc inaccessibles pour les navigateurs non-graphiques. Elles ne peuvent pas être dotées d'attribut alt et ne peuvent donc pas avoir d'équivalent texte. Les images CSS ne doivent donc pas remplacer des images significatives, propres au contenu.</p>
+
+					<p>Mettre une image de fond dans une page html est un exercice très répandu. Et il est loin et révolu le temps où on utilisait le code du type :</p>
+
+					<code>
+						< body background="images/image_de_fond.png">
+					</code>
+
+					<p>Avec les feuilles de style on peut obtenir beaucoup plus, surtout depuis l'arrivée des CSS3 qui permettent de mettre plusieurs images de fond d'un seul coup.</p>
+
+				</article>			
+			</section>
+			<!--Sujet12-->
+			<section class="main-section" id="Couleurs">
+				<header>Couleurs</header>
+				<article>
+					<p>Les navigateurs admettent 3 méthodes possibles pour la déclaration d'une couleur :</p>
+
+					<ul>
+						<li>Couleurs nommées</li>
+						<li>Couleurs en hexadecimal</li>
+						<li>Couleurs décomposées</li>
+					</ul>
+
+					<p>Couleurs nommées :</p>
+					<code>
+						{
+							background-color: grey;
+						}
+					</code>
+
+					<p>Couleurs en hexadecimal</p>
+					<code>
+						{
+							background-color: #808080;
+						}
+					</code>
+
+					<p>Couleurs décomposées</p>
+					<code>
+						{
+							background-color: RGB( 128,128,128 )
+						}
+					</code>
+
+					<!--Référence-->
+					<h1><p>Référence :</p></h1>
+					<p>Toute la documentation vien de <a href="https://css.developpez.com/tutoriels/premiers-pas/" target="_blank">developpez.com</a></p>
+
+					<!--Equipe et Copyright-->
+					<p class="zweb">Z WEB: CONVOI Lindsay, UNG Brandon, SUE Tevainarii et TEMANUPAIOURA Raimana</p>
+					<p class="copyright">2019 Copyright: CNAM Polynésie Française</p>
+
+				</article>			
+			</section>
+		</main>
+
+		
+
+	</body>
+	</html>

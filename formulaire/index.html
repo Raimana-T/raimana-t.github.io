@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulaire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+	<!--HEADER-->
+	<h1 id="title" class="text center"><font face="lucida handwriting">Sondage sur les vacances<br>des polynésiens</font></h1>
+	<p id="description" class="description text-center">
+		Merci d'accorder votre temps pour ce sondage
+	</p>
+
+	<!--FORMULAIRE-->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				
+			</div>		
+			<div class="col center">
+				<form id="survey-form">
+					<fieldset>
+						<div class="form-group">
+							<label id="name-label" for="name">Entrez votre nom</label>
+							<input type="text" class="form-control" id="name" placeholder="Nom" required />
+						</div>
+						<div class="form-group">
+							<label id="firstname-label" for="firstname">Entrez votre prénom</label>
+							<input type="text" class="form-control" id="firstname" placeholder="Prénom">
+						</div>
+						<div class="form-group">
+							<label id="number-label" for="number">Entrez votre age</label>
+							<input type="number" class="form-control" id="number" min="9" max="109" placeholder="Age">
+						</div>
+						<div class="form-group">
+							<label id="email-label" for="email">Entrez votre mail</label>
+							<input type="email" class="form-control" id="email" placeholder="Email" required />
+						</div>
+						<div class="form-group">
+							<label for="selection">Votre situation</label>
+							<select id="dropdown" name="situation" class="form-control">
+								<option value="">Choisissez</option>
+								<option value="">Etudiant</option>
+								<option value="">En formation</option>
+								<option value="">Salarié CDD</option>									
+								<option value="">Salarié CDI</option>
+								<option value="">Autre</option>
+							</optgroup>
+						</select>
+					</div>					
+					<div class="text"><h5>Genre</h5></div>
+					<div class="radio">
+						<label><input type="radio" name="genre" value="Homme">Homme</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="genre" value="Femme">Femme</label>
+					</div>
+					<div class="radio disabled">
+						<label><input type="radio" name="genre" value="Autre">Autre</label>
+					</div>
+					<br><br>
+
+					<!--SONDAGE-->
+					<div class="text"><h5>Où pensez-vous aller pendant vos prochaines vacances?</h5></div>
+					<div class="form-check">
+						<input class="form-check-input" name="destination" type="checkbox" value="Rester-sur-son-île" id="ck1">
+						<label class="form-check-label" for="ck1">Rester sur son île</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" name="destination" type="checkbox" value="Voyager-dans-nos-îles" id="ck2">
+						<label class="form-check-label" for="ck2">Voyager dans nos îles</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" name="destination" type="checkbox" value="Partir-à-l'étranger" id="ck3">
+						<label class="form-check-label" for="ck3">Partir à l'étranger</label>
+					</div>
+
+					<div class="text"><h5>Votre type d'activité?</h5></div>
+					<div class="form-check">
+						<input class="form-check-input" name="activité" type="checkbox" value="Shopping" id="ck4">
+						<label class="form-check-label" for="ck4">Shopping</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" name="activité" type="checkbox" value="Touristique" id="ck5">
+						<label class="form-check-label" for="ck5">Touristique</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" name="activité" type="checkbox" value="Activité-reposante" id="ck6">
+						<label class="form-check-label" for="ck6">Activité reposante</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" name="activité" type="checkbox" value="Autre" id="ck7">
+						<label class="form-check-label" for="ck7">Autre</label>
+					</div>
+
+					<!--COMMENTAIRE-->
+					<div class="form-group">
+						<label for="comments" class="text">Commentaire ou suggestion</label>
+						<textarea class="input-textarea" id="comments" rows="5"></textarea>
+					</div>
+
+					<!--BOUTON-->
+					<div class="form-group">
+						<button class="submit-button" type="submit" id="submit" >SOUMETTRE</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div class="col">
+
+		</div>
+	</div>
+
+	<!--COPYRIGHT-->
+	<div class="row">© 2019 Copyright: CNAM</div>
+	<p>Z WEB : CONVOI Lindsay, SUE Tevainarii, UNG Brandon, TEMANUPAIOURA Raimana.</p>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

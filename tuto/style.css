@@ -1,0 +1,100 @@
+body
+{
+	font-family: 'Merriweather', serif;
+	line-height: 1.8;
+	min-width: 250px;
+}
+
+#main-doc
+{
+	margin: 0px;
+	text-align: left;
+	margin-left: 300px;
+	margin-right: 100px;
+	margin-bottom: 80px;
+	position: absolute;
+	padding: 10px;
+}
+
+#main-doc header
+{
+  text-align: left;
+  margin: 0px;
+}
+
+.logo
+{
+	margin-left: 350px;	
+}
+
+h5
+{
+	margin-left: 50px;
+}
+
+header
+{
+	font-family: 'Cinzel', serif;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: center;
+}
+
+
+code
+{
+  	padding: 20px;
+  	margin: 10px;
+  	border-radius: 5px;
+	background-color: #AFA1A1;
+	display: block;
+  	text-align: left;
+ 	position: relative;
+  	word-break: normal;
+  	word-wrap: normal;
+  	line-height: 2;
+    margin-left: 10px;
+    margin-right: 80px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+    width: 100%;
+}
+
+#navbar
+{
+	z-index: 1;
+	position: fixed;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: rgb(32,178,170);
+}
+
+#navbar ul
+{
+	border: 1px solid;
+}
+
+#navbar li
+{
+	margin: 13px;
+}
+
+.zweb
+{
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.copyright
+{
+	text-align: center;
+}
+
+@media #main-doc(max-width: 768px){
+  	text-align: center;
+	width: 100%;
+}

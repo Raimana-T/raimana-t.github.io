@@ -1,0 +1,113 @@
+
+body
+{
+  background-color: black;
+  z-index: 1;
+}
+
+header
+{
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+
+@media (max-width: 650px) {
+  #header {
+    flex-wrap: wrap;
+  }
+}
+
+.text
+{
+  font-family: 'Yeon Sung', cursive;
+  color: white;
+}
+
+h1
+{
+  font-family: 'Black Ops One', cursive;
+  text-align: center;
+}
+
+h2
+{
+  font-family: 'Special Elite', cursive;
+  color: rgb(0, 200, 255);
+}
+
+h3
+{
+  font-family: 'Black Ops One', cursive;
+  color: rgb(0, 200, 255);
+}
+
+p
+{
+  color: white;
+}
+
+.container
+{
+  padding: 20px;
+}
+
+#prix
+{
+  border: 1px white solid;
+  border-radius: 25px;
+  border: ridge;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-bar
+{
+  color: rgb(40, 55, 71);
+}
+
+.mail
+{
+ color: rgb(0, 200, 255);
+}
+
+.icon
+{
+   width: 350px;
+}
+
+.vapo
+{
+  color: #FFFFFF;
+}
+
+.title
+{
+  color: rgb(0, 200, 255);
+}
+
+#debutant .box 
+{
+  display: flex;
+  text-align: center;
+  height: 200px;
+  width: 80vw;
+  padding: 10px;
+}
+
+@media (max-width: 550px) {
+  #debutant .box 
+  {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+}
+
+
+
+
+
